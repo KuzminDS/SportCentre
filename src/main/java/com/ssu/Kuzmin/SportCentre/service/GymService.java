@@ -6,31 +6,8 @@ import com.ssu.Kuzmin.SportCentre.entity.Gym;
 
 import java.util.List;
 
-public class GymService {
-
-    private final GymDao gymDao;
-
-    public GymService(GymDao gymDao) {
-        this.gymDao = gymDao;
-    }
-
-    public Gym getById(int id) throws Exception {
-        return gymDao.getById(id);
-    }
-
-    public List<Gym> getAll() {
-        return gymDao.getAll();
-    }
-
-    public void add(Gym gym) {
-        gymDao.add(gym);
-    }
-
-    public void update(Gym gym) {
-        gymDao.update(gym);
-    }
-
-    public void delete(Gym gym) {
-        gymDao.delete(gym);
+public class GymService extends Service<Gym> {
+    public GymService() {
+        super(Gym.class);
     }
 }

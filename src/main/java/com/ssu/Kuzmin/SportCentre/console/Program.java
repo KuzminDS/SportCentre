@@ -11,8 +11,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.Persistence;
 import java.util.Arrays;
 
-public class Temp {
+public class Program {
     public static void main(String[] args) {
-        SessionFactory sessionFactory = HibernateSessionFactoryUtil.getSessionFactory();
+        ConsoleUI consoleUI = new ConsoleUI();
+        consoleUI.start();
     }
 }

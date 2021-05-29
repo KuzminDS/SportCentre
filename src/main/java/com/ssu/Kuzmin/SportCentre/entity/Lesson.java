@@ -14,7 +14,7 @@ public class Lesson implements Serializable {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "group_id", referencedColumnName = "id")
-    private Group group;
+    private Group group1;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "trainer_id", referencedColumnName = "id")
@@ -33,8 +33,8 @@ public class Lesson implements Serializable {
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
-    public Group getGroup() { return group; }
-    public void setGroup(Group group) { this.group = group; }
+    public Group getGroup() { return group1; }
+    public void setGroup(Group group) { this.group1 = group; }
 
     public Trainer getTrainer() { return trainer; }
     public void setTrainer(Trainer trainer) { this.trainer = trainer; }

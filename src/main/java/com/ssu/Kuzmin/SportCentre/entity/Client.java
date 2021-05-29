@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "client")
-public class Client extends User {
+public class Client extends Human {
 
     @ManyToMany
     @JoinTable(name = "group_client",

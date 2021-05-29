@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "trainer")
-public class Trainer extends User {
+public class Trainer extends Human {
 
     @Column(name = "salary", nullable = false)
     private int salary;

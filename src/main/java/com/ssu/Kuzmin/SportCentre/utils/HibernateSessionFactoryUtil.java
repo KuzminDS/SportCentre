@@ -15,11 +15,12 @@ public class HibernateSessionFactoryUtil {
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration().configure();
+                configuration.addAnnotatedClass(Group.class);
+                configuration.addAnnotatedClass(User.class);
+                configuration.addAnnotatedClass(Lesson.class);
                 configuration.addAnnotatedClass(Client.class);
                 configuration.addAnnotatedClass(Trainer.class);
-                configuration.addAnnotatedClass(Group.class);
                 configuration.addAnnotatedClass(Gym.class);
-                configuration.addAnnotatedClass(Lesson.class);
                 configuration.addAnnotatedClass(Subscription.class);
 
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());

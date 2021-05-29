@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "group")
+@Table(name = "group1")
 public class Group implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
@@ -21,7 +21,7 @@ public class Group implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "client_id"))
     private List<Client> clients;
 
-    @OneToOne(mappedBy = "group")
+    @OneToOne(mappedBy = "group1")
     private Lesson lesson;
 
     public int getId() { return id; }
